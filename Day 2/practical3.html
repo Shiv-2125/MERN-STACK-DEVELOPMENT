@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bride Matrimony Profile</title>
+</head>
+<body>
+    <h1>Bride Matrimony Profile</h1>
+    <form action="/submit-profile" method="post">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required><br><br>
+            
+            <label for="height">Height:</label>
+            <select id="height" name="height" required>
+                <option value="">Select Height</option>
+                <option value="4ft-6in">4' 6"</option>
+                <option value="5ft-0in">5' 0"</option>
+                <option value="5ft-6in">5' 6"</option>
+                <option value="6ft-0in">6' 0"</option>
+            </select><br><br>
+            
+            <label>Marital Status:</label><br>
+            <input type="radio" id="single" name="marital_status" value="Single" required>
+            <label for="single">Single</label><br>
+            <input type="radio" id="divorced" name="marital_status" value="Divorced">
+            <label for="divorced">Divorced</label><br>
+            <input type="radio" id="widowed" name="marital_status" value="Widowed">
+            <label for="widowed">Widowed</label><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Education & Profession</legend>
+            <label for="education">Highest Qualification:</label>
+            <select id="education" name="education" required>
+                <option value="">Select Qualification</option>
+                <option value="High School">High School</option>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+            </select><br><br>
+            
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferences</legend>
+            <label>Preferred Partner's Education:</label><br>
+            <input type="checkbox" id="bachelor" name="partner_education[]" value="Bachelor's">
+            <label for="bachelor">Bachelor's</label><br>
+            <input type="checkbox" id="master" name="partner_education[]" value="Master's">
+            <label for="master">Master's</label><br>
+            <input type="checkbox" id="phd" name="partner_education[]" value="PhD">
+            <label for="phd">PhD</label><br><br>
+            
+            <label for="partner_age">Preferred Partner's Age:</label>
+            <select id="partner_age" name="partner_age" required>
+                <option value="">Select Age Range</option>
+                <option value="25-30">25-30</option>
+                <option value="30-35">30-35</option>
+                <option value="35-40">35-40</option>
+            </select><br><br>
+        </fieldset>
+        
+        <button type="submit">Submit Profile</button>
+    </form>
+</body>
+</html>
+
+    
